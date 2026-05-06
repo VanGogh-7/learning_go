@@ -1,0 +1,24 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, consumed by `go tool cover -func=count.out`
+*.out
+
+# Dependency directories (remove the comment below if it applies to your case)
+# vendor/
+
+# IDE specific files (JetBrains)
+.idea/
+*.iwb
+*.iws
+
+# Operating system files
+.DS_Store
+Thumbs.db
