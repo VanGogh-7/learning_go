@@ -11,6 +11,7 @@ type person struct {
 }
 
 func main() {
+
 	var x int32 = 10
 	var y bool = true
 	pointerX := &x
