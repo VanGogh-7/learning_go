@@ -1,0 +1,21 @@
+{{define "title"}}Movies{{end}}
+{{define "content"}}
+<header class="page-header">
+    <p class="eyebrow">IN-MEMORY GO DATA</p>
+    <h1>Movies</h1>
+    <p>Each card below is rendered on the server with data from <code>models/movie.go</code>.</p>
+</header>
+
+<!-- The dot is the []models.Movie value passed by the Movies handler. -->
+<div class="movie-grid">
+    {{range .}}
+    <article class="movie-card">
+        <span class="genre">{{.Genre}}</span>
+        <h2>{{.Title}}</h2>
+        <p class="movie-meta">{{.Year}} · Rating {{printf "%.1f" .Rating}}</p>
+        <p>{{.Description}}</p>
+        <a href="/movie?id={{.ID}}">View details</a>
+    </article>
+    {{end}}
+</div>
+{{end}}

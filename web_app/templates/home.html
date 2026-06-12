@@ -1,0 +1,18 @@
+{{define "title"}}Home{{end}}
+{{define "content"}}
+<section class="hero">
+    <p class="eyebrow">LEARNING PROJECT</p>
+    <h1>Find your next favorite movie</h1>
+    <p>This small demo shows how Go routes requests, renders HTML templates, serves static files, and returns JSON to frontend JavaScript.</p>
+    <div class="actions">
+        <a class="button" href="/movies">Browse movies</a>
+        <button id="load-recommendations" type="button">Load Sci-Fi recommendations</button>
+    </div>
+</section>
+
+<section>
+    <h2>Recommendations loaded with JavaScript</h2>
+    <p class="muted">Click the button above to fetch JSON from <code>/api/recommendations?genre=Sci-Fi</code>.</p>
+    <div id="recommendation-results" class="movie-grid"></div>
+</section>
+{{end}}

@@ -1,0 +1,26 @@
+{{define "title"}}Movie Details{{end}}
+{{define "content"}}
+<!-- The handler passes a struct containing Movie and Recommendations fields. -->
+<article class="detail-panel">
+    <span class="genre">{{.Movie.Genre}}</span>
+    <h1>{{.Movie.Title}}</h1>
+    <p class="movie-meta">{{.Movie.Year}} · Rating {{printf "%.1f" .Movie.Rating}}</p>
+    <p>{{.Movie.Description}}</p>
+    <a href="/movies">Back to all movies</a>
+</article>
+
+<section>
+    <h2>More {{.Movie.Genre}} movies</h2>
+    <div class="movie-grid">
+        {{range .Recommendations}}
+        <article class="movie-card">
+            <h3>{{.Title}}</h3>
+            <p class="movie-meta">{{.Year}} · Rating {{printf "%.1f" .Rating}}</p>
+            <a href="/movie?id={{.ID}}">View details</a>
+        </article>
+        {{else}}
+        <p class="muted">No other movies in this genre yet.</p>
+        {{end}}
+    </div>
+</section>
+{{end}}

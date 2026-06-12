@@ -1,0 +1,14 @@
+{{define "title"}}Profile{{end}}
+{{define "content"}}
+<!-- The dot is a models.User value created from the user query parameter. -->
+<section class="narrow-panel">
+    <p class="eyebrow">FAKE PROFILE</p>
+    <h1>Hello, {{.Username}}</h1>
+    <p>This page reads your name from the URL query string.</p>
+
+    <h2>Preferred genres</h2>
+    <div class="genre-list">
+        {{range .PreferredGenres}}<span class="genre">{{.}}</span>{{end}}
+    </div>
+</section>
+{{end}}

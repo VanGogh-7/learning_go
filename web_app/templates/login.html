@@ -1,0 +1,16 @@
+{{define "title"}}Login{{end}}
+{{define "content"}}
+<section class="narrow-panel">
+    <h1>Demo login</h1>
+    <p class="muted">This form demonstrates how a Go handler reads a POST request. No credentials are stored.</p>
+    <form action="/login" method="post">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" required>
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required>
+
+        <button type="submit">Log in</button>
+    </form>
+</section>
+{{end}}
